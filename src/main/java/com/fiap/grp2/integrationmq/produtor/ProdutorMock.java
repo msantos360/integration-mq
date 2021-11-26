@@ -9,6 +9,8 @@ import org.springframework.amqp.core.Queue;
 import org.springframework.amqp.rabbit.core.RabbitAdmin;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 
+import java.util.Random;
+
 import static com.fiap.grp2.integrationmq.util.Constants.*;
 
 public class ProdutorMock {
@@ -26,14 +28,20 @@ public class ProdutorMock {
         RabbitTemplate template = new RabbitTemplate(RabbitMqConfig.getConnection());
 
         Gson jsonGson = new Gson();
-
+        Random random = new Random();
         SensorDto sensorDto = new SensorDto();
-        for(int i =0; i < 100; i++){
+
+        float temp_min = -35f;
+        float temp_max = 40f;
+        float umid_min = 0f;
+        float umid_max = 100f;
+
+        for(int i =0; i < 350; i++){
             sensorDto.setId(Long.valueOf(i));
-            sensorDto.setLatitude("0");
-            sensorDto.setLongitude("0");
-            sensorDto.setTemperatura("25");
-            sensorDto.setUmidade("70");
+            sensorDto.setLatitude(random.nextFloat());
+            sensorDto.setLongitude(random.nextFloat());
+            sensorDto.setTemperatura(random.nextFloat() * (temp_max - temp_min) + temp_min);
+            sensorDto.setUmidade(random.nextFloat() * (umid_max - umid_min) + umid_min);
 
             template.convertAndSend(RABBITMQ_EXCHANGE, RABBITMQ_ROUTING_KEY, jsonGson.toJson(sensorDto));
         }

@@ -2,10 +2,10 @@ package com.fiap.grp2.integrationmq.model;
 
 public class SensorDto {
     private Long id;
-    private String latitude;
-    private String longitude;
-    private String temperatura;
-    private String umidade;
+    private Float latitude;
+    private Float longitude;
+    private Float temperatura;
+    private Float umidade;
 
     public Long getId() {
         return id;
@@ -15,35 +15,35 @@ public class SensorDto {
         this.id = id;
     }
 
-    public String getLatitude() {
+    public Float getLatitude() {
         return latitude;
     }
 
-    public void setLatitude(String latitude) {
+    public void setLatitude(Float latitude) {
         this.latitude = latitude;
     }
 
-    public String getLongitude() {
+    public Float getLongitude() {
         return longitude;
     }
 
-    public void setLongitude(String longitude) {
+    public void setLongitude(Float longitude) {
         this.longitude = longitude;
     }
 
-    public String getTemperatura() {
+    public Float getTemperatura() {
         return temperatura;
     }
 
-    public void setTemperatura(String temperatura) {
+    public void setTemperatura(Float temperatura) {
         this.temperatura = temperatura;
     }
 
-    public String getUmidade() {
+    public Float getUmidade() {
         return umidade;
     }
 
-    public void setUmidade(String umidade) {
+    public void setUmidade(Float umidade) {
         this.umidade = umidade;
     }
 
