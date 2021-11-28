@@ -14,7 +14,8 @@ import java.util.Random;
 import static com.fiap.grp2.integrationmq.util.Constants.*;
 
 public class ProdutorMock {
-    public static void main(String[] args){
+	
+    public static void START_PRODUTOR() {
         RabbitAdmin admin = new RabbitAdmin(RabbitMqConfig.getConnection());
 
         Queue rabbitQueue = new Queue(RABBITMQ_QUEUE);
@@ -45,7 +46,5 @@ public class ProdutorMock {
 
             template.convertAndSend(RABBITMQ_EXCHANGE, RABBITMQ_ROUTING_KEY, jsonGson.toJson(sensorDto));
         }
-
     }
-
 }

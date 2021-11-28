@@ -1,15 +1,16 @@
 package com.fiap.grp2.integrationmq.util;
 
 public class Constants {
-    public static final long SLEEP_TIME_MILLIS = 60000l;
+    //public static final long SLEEP_TIME_MILLIS = 60000l;
+	public static final long SLEEP_TIME_MILLIS = 0l;
 
     public static final float TEMPERATURA_MIN = 0f;
     public static final float TEMPERATURA_MAX = 35f;
     public static final float UMIDADE_MIN = 15f;
 
-    public static final String RABBITMQ_USERNAME = "";
-    public static final String RABBITMQ_PASSWD = "";
-    public static final String RABBITMQ_VIRTUAL_HOST = "";
+    public static final String RABBITMQ_USERNAME = "fouqwuxa";
+    public static final String RABBITMQ_PASSWD = "cS84RNzvH92ilOQwdFfhrTcB7ANvsEgp";
+    public static final String RABBITMQ_VIRTUAL_HOST = "fouqwuxa";
 
     public static final String RABBITMQ_EXCHANGE = "exchange.monitoracao";
     public static final String RABBITMQ_QUEUE = "queue.sensor";
@@ -27,3 +28,4 @@ public class Constants {
     public static final String EMAIL_DESTINO = "";
 
 }
+
