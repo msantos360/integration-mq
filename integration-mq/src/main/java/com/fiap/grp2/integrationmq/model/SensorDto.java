@@ -1,50 +1,68 @@
 package com.fiap.grp2.integrationmq.model;
 
 public class SensorDto {
-    private Long id;
-    private Float latitude;
-    private Float longitude;
-    private Float temperatura;
-    private Float umidade;
+	private Long id;
+	private Float latitude;
+	private Float longitude;
+	private Float temperatura;
+	private Float umidade;
+	private String alarmeTemperatura;
+	private String alarmeUmidade;
 
-    public Long getId() {
-        return id;
-    }
+	public String getAlarmeTemperatura() {
+		return alarmeTemperatura;
+	}
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+	public void setAlarmeTemperatura(String alarmeTemperatura) {
+		this.alarmeTemperatura = alarmeTemperatura;
+	}
 
-    public Float getLatitude() {
-        return latitude;
-    }
+	public String getAlarmeUmidade() {
+		return alarmeUmidade;
+	}
 
-    public void setLatitude(Float latitude) {
-        this.latitude = latitude;
-    }
+	public void setAlarmeUmidade(String alarmeUmidade) {
+		this.alarmeUmidade = alarmeUmidade;
+	}
 
-    public Float getLongitude() {
-        return longitude;
-    }
+	public Long getId() {
+		return id;
+	}
 
-    public void setLongitude(Float longitude) {
-        this.longitude = longitude;
-    }
+	public void setId(Long id) {
+		this.id = id;
+	}
 
-    public Float getTemperatura() {
-        return temperatura;
-    }
+	public Float getLatitude() {
+		return latitude;
+	}
 
-    public void setTemperatura(Float temperatura) {
-        this.temperatura = temperatura;
-    }
+	public void setLatitude(Float latitude) {
+		this.latitude = latitude;
+	}
 
-    public Float getUmidade() {
-        return umidade;
-    }
+	public Float getLongitude() {
+		return longitude;
+	}
 
-    public void setUmidade(Float umidade) {
-        this.umidade = umidade;
-    }
+	public void setLongitude(Float longitude) {
+		this.longitude = longitude;
+	}
+
+	public Float getTemperatura() {
+		return temperatura;
+	}
+
+	public void setTemperatura(Float temperatura) {
+		this.temperatura = temperatura;
+	}
+
+	public Float getUmidade() {
+		return umidade;
+	}
+
+	public void setUmidade(Float umidade) {
+		this.umidade = umidade;
+	}
 
 }

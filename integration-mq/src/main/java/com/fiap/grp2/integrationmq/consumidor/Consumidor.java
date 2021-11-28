@@ -42,6 +42,8 @@ public class Consumidor {
 							.append(SKIP_LINE).append("TEMPERATURA: ").append(sensorDto.getTemperatura())
 							.append(SKIP_LINE).append("Long.:").append(sensorDto.getLongitude()).append(SKIP_LINE)
 							.append("Lat.: ").append(sensorDto.getLatitude());
+					
+					sensorDto.setAlarmeTemperatura("Alarme de temperatura. Email disparado.");
 
 					// email.sendGmailSimpleMail(EMAIL_DESTINO, assunto.toString(),
 					// conteudo.toString());
@@ -56,6 +58,7 @@ public class Consumidor {
 							.append("Long.:").append(sensorDto.getLongitude()).append(SKIP_LINE).append("Lat.: ")
 							.append(sensorDto.getLatitude());
 
+					sensorDto.setAlarmeUmidade("Alarme de umidade. Email disparado.");
 					// email.sendGmailSimpleMail(EMAIL_DESTINO, assunto.toString(),
 					// conteudo.toString());
 				}
