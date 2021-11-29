@@ -37,7 +37,7 @@ public class ProdutorMock {
         float umid_min = 0f;
         float umid_max = 100f;
 
-        for(int i =0; i < 350; i++){
+        for(int i =0; i < 20; i++){
             sensorDto.setId(Long.valueOf(i));
             sensorDto.setLatitude(random.nextFloat());
             sensorDto.setLongitude(random.nextFloat());
